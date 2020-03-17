@@ -2,16 +2,21 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
+	"gwt/router"
+	"log"
+	"net/http"
 )
 
 func main()  {
 	fmt.Println("hello, gwt")
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+
+	ginHandler := router.InitRouter()
+
+	server := http.Server{
+		Addr: ":8080",
+		Handler: ginHandler,
+	}
+
+	log.Fatal(server.ListenAndServe())
+
 }
