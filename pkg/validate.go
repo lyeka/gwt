@@ -9,6 +9,7 @@ import (
 )
 
 var (
+	// Trans 单例翻译器
 	Trans    ut.Translator
 )
 

@@ -2,9 +2,10 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"gwt/router/api/pexels"
+	"github.com/lyeka/gwt/router/api/pexels"
 )
 
+// InitRouter 初始化路由
 func InitRouter() *gin.Engine {
 	r := gin.New()
 	r.Use(gin.Logger())

@@ -7,6 +7,7 @@ const (
 	InvalidParam     = 400
 )
 
+// MsgFlags 错误码提示语
 var MsgFlags = map[int]string{
 	Success:          "ok",
 	Error:            "fail",
